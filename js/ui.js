@@ -14,7 +14,7 @@ class UI {
             <div class="card bg-dark text-white mb-3" style="color:#333;">
               <img src="${result.image}" class="img-responsive card-img-top">
               <div class="card-body">
-                <h5 class="card-title">${result.name} | ID(${result.id})</h5>
+                <h5 class="card-title">${result.name}</h5>
 
                 <div href="#" class="list-group-item list-group-item-action list-group-item-dark bg-dark">
                   <div class="d-flex w-100 justify-content-between">
