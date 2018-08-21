@@ -53,5 +53,18 @@ async function fetchCharacters() {
 }
 
 const characters = fetchCharacters()
-    .then(characters => ui.showCharacters(characters));
+    .then(characters => {
+        if(ui.showCharacters(characters)) {
+            registerEventListeners();
+        }
+    });
+
+// Listen for modal toggle button
+function registerEventListeners() {
+    const togglers = document.querySelectorAll('.toggler');
+    togglers.forEach(toggler => toggler.addEventListener('click', e => {
+        e.preventDefault();
+        console.log(e.target)
+    }))
+}
 
