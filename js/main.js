@@ -33,6 +33,7 @@ $(document).ready(function () {
 // THIS IS THE API PART
 // THIS IS THE API YOU COULD CHECK THE DOCUMENTATION "https://rickandmortyapi.com/""
 
+//
 const ENDPOINTS = {
     base: "https://rickandmortyapi.com/api/",
     characters: "https://rickandmortyapi.com/api/character",
@@ -40,7 +41,7 @@ const ENDPOINTS = {
     episodes: "https://rickandmortyapi.com/api/episode"
 }
 
-
+// UI object instance
 const ui = new UI();
 
 // Fetch characters
@@ -53,3 +54,4 @@ async function fetchCharacters() {
 
 const characters = fetchCharacters()
     .then(characters => ui.showCharacters(characters));
+

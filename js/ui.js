@@ -1,6 +1,10 @@
 class UI {
   constructor() {
-    this.plateContainer = document.getElementById("plates-container");// points to entry point
+    this.plateContainer = document.getElementById("plates-container"); // points to entry point
+    this.modal = {
+      title: document.querySelector(".modal-title"),
+      body: document.querySelector(".modal-body")
+    };
   }
 
   // show characters in DOM
@@ -41,9 +45,10 @@ class UI {
                   <div class="d-flex w-100 justify-content-between">
                     <small class="mb-1 text-white">Location</small>
                     <small class="mb-1 text-warning">
-                      <a href="${result.location.url}">${
-          result.location.name
-        }</a>
+                      <a
+                        href="${result.location.url}">
+                        ${result.location.name}
+                      </a>
                     </small>
                   </div>
                 </div>
@@ -67,13 +72,13 @@ class UI {
                 <ul class="list-group">
                   <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark bg-dark text-white">
                     Episodes
-                    <span class="badge badge-primary badge-pill">${result.episode.length}</span>
+                    <span class="badge badge-primary badge-pill">${
+                      result.episode.length
+                    }</span>
                   </li>
                 </ul>
 
-                <a href="${
-                  result.url
-                }" class="btn btn-primary" style="width:100%">See Character</a>
+                <button data-toggle="modal" data-target="#exampleModal" class="btn btn-secondary" style="width:100%">See Character</a>
 
               </div>
             </div>
@@ -83,4 +88,6 @@ class UI {
       })
       .join("");
   }
+
+  toggleModal() {}
 }
