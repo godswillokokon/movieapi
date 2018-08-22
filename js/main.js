@@ -59,6 +59,36 @@ const characters = fetchCharacters()
         }
     });
 
+// Fetch episodes
+async function fetchEpisodes() {
+    const response = await fetch(ENDPOINTS.episodes);
+    const data = await response.json()
+        .catch(err => console.error(err));
+    return data;
+}
+
+const episodes = fetchEpisodes()
+    .then(episodes => {
+        if(ui.showEpisodes(episodes)) {
+            registerEventListeners();
+        }
+    });
+
+// Fetch locations
+async function fetchLocations() {
+    const response = await fetch(ENDPOINTS.locations);
+    const data = await response.json()
+        .catch(err => console.error(err));
+    return data;
+}
+
+const locations = fetchLocations()
+    .then(locations => {
+        if(ui.showLocations(locations)) {
+            registerEventListeners();
+        }
+    });
+
 // Listen for modal toggle button
 function registerEventListeners() {
     const togglers = document.querySelectorAll('.toggler');
@@ -67,4 +97,3 @@ function registerEventListeners() {
         console.log(e.target)
     }))
 }
-
