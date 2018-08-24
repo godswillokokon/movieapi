@@ -82,14 +82,14 @@ class UI {
         <div col-12>
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="${info.prev}" tabindex="-1">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">...</a></li>
-              <li class="page-item"><a class="page-link" href="#">${info.pages} Pages</a></li>
-              <li class="page-item">
-                <a class="page-link" href="${info.next}" onclick="showCharacters()" >Next</a>
-              </li>
+            <li class="page-item disabled">
+              <a class="page-link" href="${info.prev}" tabindex="-1">Previous</a>
+            </li>
+
+            <li class="page-item">
+              <a class="page-link" href="${info.next}" onclick="nextCharacters()" >Next</a>
+            </li>
+            <li class="page-item"><a class="page-link">1 of ${info.pages} Pages</a></li>
             </ul>
           </nav>
         </div>

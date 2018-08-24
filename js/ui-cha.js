@@ -11,6 +11,8 @@ class UI {
   }
 
 
+
+
   // show characters in DOM
   showCharacters(charactersObject) {
     console.log(charactersObject);
@@ -106,6 +108,14 @@ class UI {
       `;
     })
   .join("");
+  // function nextCharacters() {
+  //   for (let i = 1; i < info.pages; i++) {
+  //     let next = "https://rickandmortyapi.com/api/character/?page=" + i;
+  //   }
+  //   characters = next[i];
+  //
+  // }
+  // nextCharacters();
 
     this.pagesContainer.innerHTML = `
         <div col-12>
@@ -115,10 +125,10 @@ class UI {
                 <a class="page-link" href="${info.prev}" tabindex="-1">Previous</a>
               </li>
 
-              <li class="page-item"><a class="page-link" href="#">${info.pages}</a></li>
               <li class="page-item">
-                <a class="page-link" href="${info.next}" onclick="fetchCharacters()" >Next</a>
+                <a class="page-link" href="${info.next}" onclick="nextCharacters()" >Next</a>
               </li>
+              <li class="page-item"><a class="page-link">1 of ${info.pages} Pages</a></li>
             </ul>
           </nav>
         </div>

@@ -26,39 +26,39 @@ $(document).ready(function () {
         $('a[aria-expanded=true]').attr('aria-expanded', 'false');
     });
 
-    // //Search
-    // $(document).ready(() => {
-    //   $('#searchForm').on("submit", (e) => {
-    //     console.log($('#displayText').val());
-    //     e.preventDefault();
-    //   });
-    // });
-    //
-    // function getMovies(searchText) {
-    //   // console.log(displayText);
-    //   axios.get("https://rickandmortyapi.com/api/character/?name=" + searchText)
-    //   .then((response) =>{
-    //     // console.log(response);
-    //     let movies = response.results.name;
-    //     console.log(movies);
-    //     let output = "";
-    //     $.each(movies, (index, movie) => {
-    //       output += `
-    //       <div class="col-md-3">
-    //         <div class="well text-center">
-    //         <img scr="${movie.image}">
-    //         <h5>${movie.name}</h5>
-    //         <a onclick="movieSelected("${movie.id}")" class="btn btn- primary" href="#">More Details</a>
-    //         </div>
-    //       </div>
-    //       `
-    //     });
-    //     $("#movies").html(output);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //   });
-    // }
+    //Search
+    $(document).ready(() => {
+      $('#searchForm').on("submit", (e) => {
+        console.log($('#displayText').val());
+        e.preventDefault();
+      });
+    });
+
+    function getMovies(searchText) {
+      // console.log(displayText);
+      axios.get("https://rickandmortyapi.com/api/character/?name=" + searchText)
+      .then((response) =>{
+        // console.log(response);
+        let movies = response.results.name;
+        console.log(movies);
+        let output = "";
+        $.each(movies, (index, movie) => {
+          output += `
+          <div class="col-md-3">
+            <div class="well text-center">
+            <img scr="${movie.image}">
+            <h5>${movie.name}</h5>
+            <a onclick="movieSelected("${movie.id}")" class="btn btn- primary" href="#">More Details</a>
+            </div>
+          </div>
+          `
+        });
+        $("#movies").html(output);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+    }
 
     fetchCharacters();
     fetchEpisodes();
@@ -72,6 +72,7 @@ $(document).ready(function () {
 // THIS IS THE API YOU COULD CHECK THE DOCUMENTATION "https://rickandmortyapi.com/""
 
 //
+
 const ENDPOINTS = {
     base:       "https://rickandmortyapi.com/api/",
     characters: "https://rickandmortyapi.com/api/character",
@@ -81,6 +82,8 @@ const ENDPOINTS = {
 
 // UI object instance
 const ui = new UI();
+
+
 
 // Fetch characters
 async function fetchCharacters() {
