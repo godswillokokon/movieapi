@@ -10,6 +10,7 @@ class UI {
     this.nextPage = 2;
   }
 
+
   // show characters in DOM
   showCharacters(charactersObject) {
     console.log(charactersObject);
@@ -18,6 +19,7 @@ class UI {
     this.plateContainer.innerHTML = results
       .map(result => {
         return `
+
           <div class="col-xs-6 col-sm-4 col-md-4">
             <div class="card bg-dark text-white mb-3" style="color:#333;">
               <img src="${result.image}" class="img-responsive card-img-top">
@@ -102,8 +104,8 @@ class UI {
             </div>
           </div>
       `;
-      })
-      .join("");
+    })
+  .join("");
 
     this.pagesContainer.innerHTML = `
         <div col-12>
@@ -115,13 +117,14 @@ class UI {
 
               <li class="page-item"><a class="page-link" href="#">${info.pages}</a></li>
               <li class="page-item">
-                <a class="page-link" href="${info.next}" onclick="showCharacters()" >Next</a>
+                <a class="page-link" href="${info.next}" onclick="fetchCharacters()" >Next</a>
               </li>
             </ul>
           </nav>
         </div>
       `;
   }
+
 
   toggleModal() {}
 }

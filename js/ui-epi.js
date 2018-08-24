@@ -54,7 +54,7 @@ class UI {
                 </div>
 
                 <button data-toggle="modal" data-target="#exampleModal" data-id="
-                " class="btn btn-secondary toggler" style="width:100%">Download here</a>
+                " class="btn btn-secondary toggler" style="width:100%" href="${result.url}">Download here</a>
 
               </div>
             </div>
