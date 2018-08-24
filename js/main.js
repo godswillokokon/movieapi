@@ -35,10 +35,10 @@ $(document).ready(function () {
 
 //
 const ENDPOINTS = {
-    base: "https://rickandmortyapi.com/api/",
+    base:       "https://rickandmortyapi.com/api/",
     characters: "https://rickandmortyapi.com/api/character",
-    locations: "https://rickandmortyapi.com/api/location",
-    episodes: "https://rickandmortyapi.com/api/episode"
+    locations:  "https://rickandmortyapi.com/api/location",
+    episodes:   "https://rickandmortyapi.com/api/episode"
 }
 
 // UI object instance

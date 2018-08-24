@@ -112,9 +112,7 @@ class UI {
               <li class="page-item disabled">
                 <a class="page-link" href="${info.prev}" tabindex="-1">Previous</a>
               </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
 
-              <li class="page-item"><a class="page-link" href="#">...</a></li>
               <li class="page-item"><a class="page-link" href="#">${info.pages}</a></li>
               <li class="page-item">
                 <a class="page-link" href="${info.next}" onclick="showCharacters()" >Next</a>
