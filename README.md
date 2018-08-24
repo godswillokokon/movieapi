@@ -1,1 +1,1 @@
-# movieapi
+# Rick and Morty Series
