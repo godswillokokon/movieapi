@@ -59,7 +59,7 @@ $(document).ready(function () {
         console.log(err);
       });
     }
-
+    
     fetchCharacters();
     fetchEpisodes();
     fetchLocations();
@@ -98,6 +98,7 @@ const characters = fetchCharacters()
         if(ui.showCharacters(characters)) {
             registerEventListeners();
         }
+
     });
 
 // Fetch episodes
@@ -113,6 +114,7 @@ const episodes = fetchEpisodes()
         if(ui.showEpisodes(episodes)) {
             registerEventListeners();
         }
+
     });
 
 // Fetch locations

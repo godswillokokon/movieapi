@@ -18,6 +18,7 @@ class UI {
     console.log(charactersObject);
     const { info, results } = charactersObject;
 
+
     this.plateContainer.innerHTML = results
       .map(result => {
         return `
@@ -90,17 +91,17 @@ class UI {
                 </div>
 
                 <ul class="list-group">
-                  <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark bg-dark text-white">
+                    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-dark bg-dark text-white">
                     Episodes
-                    <span class="badge badge-primary badge-pill">${
+                  <span class="badge badge-primary badge-pill" href="${result.episode}">${
                       result.episode.length
                     }</span>
                   </li>
                 </ul>
 
-                <button data-toggle="modal" data-target="#exampleModal" data-id="${
-                  result.id
-                }" class="btn btn-secondary toggler" style="width:100%">See Character</a>
+                <!--<button data-toggle="modal" data-target="#exampleModal" data-id="${
+                  result.episode
+                }" class="btn btn-secondary toggler" style="width:100%">Download</a>-->
 
               </div>
             </div>

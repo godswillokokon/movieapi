@@ -67,9 +67,9 @@ class UI {
                 </div>
 
 
-                <button data-toggle="modal" data-target="#exampleModal" data-id="${
+              <!--  <button data-toggle="modal" data-target="#exampleModal" data-id="${
                   result.id
-                }" class="btn btn-secondary toggler" style="width:100%">See Character</a>
+                }" class="btn btn-secondary toggler" style="width:100%">See Character</a>-->
 
               </div>
             </div>
