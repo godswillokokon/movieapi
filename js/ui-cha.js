@@ -99,9 +99,9 @@ class UI {
                   </li>
                 </ul>
 
-                <!--<button data-toggle="modal" data-target="#exampleModal" data-id="${
+                <!-- <button data-toggle="modal" data-target="#exampleModal" data-id="${
                   result.episode
-                }" class="btn btn-secondary toggler" style="width:100%">Download</a>-->
+                }" class="btn btn-secondary toggler" style="width:100%">Download</a> -->
 
               </div>
             </div>

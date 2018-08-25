@@ -59,7 +59,7 @@ $(document).ready(function () {
         console.log(err);
       });
     }
-    
+
     fetchCharacters();
     fetchEpisodes();
     fetchLocations();
@@ -142,3 +142,11 @@ function registerEventListeners() {
         console.log(e.target)
     }))
 }
+
+// $('#pagination-demo').twbsPagination({
+//         totalPages: 35,
+//         visiblePages: 7,
+//         onPageClick: function (event, page) {
+//             $('#page-content').text('Page ' + page);
+//         }
+//     });
