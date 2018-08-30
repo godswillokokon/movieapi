@@ -5,13 +5,12 @@ class UI {
     this.modal = {
       title: document.querySelector(".modal-title"),
       body: document.querySelector(".modal-body")
+
     };
     this.pages = 25;
     this.nextPage = 2;
+
   }
-
-
-
 
   // show characters in DOM
   showCharacters(charactersObject) {
@@ -86,6 +85,7 @@ class UI {
                 <div href="#" class="list-group-item list-group-item-action list-group-item-dark bg-dark">
                   <div class="d-flex w-100 justify-content-between">
                     <small class="mb-1 text-white">Created</small>
+
                     <small class="mb-1 text-warning">${result.created}</small>
                   </div>
                 </div>
@@ -123,11 +123,11 @@ class UI {
           <nav aria-label="Page navigation example">
             <ul class="pagination justify-content-center">
               <li class="page-item disabled">
-                <a class="page-link" href="${info.prev}" tabindex="-1">Previous</a>
+                <a class="page-link" href="${info.prev}" id="prev" tabindex="-1">Previous</a>
               </li>
 
               <li class="page-item">
-                <a class="page-link" href="${info.next}" onclick="nextCharacters()" >Next</a>
+                <a class="page-link" href="#" onclick="getNext('${info.next}')" id="next" >Next</a>
               </li>
               <li class="page-item"><a class="page-link">1 of ${info.pages} Pages</a></li>
             </ul>
@@ -136,6 +136,32 @@ class UI {
       `;
   }
 
-
   toggleModal() {}
 }
+//get input element
+// let filterInput = document.getElementById('filterInput');
+// //add event listener
+// filterInput.addEventListener('keyup', filterNames);
+// function filterNames() {
+//   //get value of filterInput
+//   let filterValue = document.getElementById('filterInput').value.toUpperCase();
+//   // console.log(filterValue);
+//
+//   //get names ul
+//   let container = document.getElementById('names');
+//   let div = container.querySelectorAll('pages-container');
+//
+//   //loop through collection-item lis
+//   for(let i = 0; i < div.length; i++){
+//     let a = div[i].getElementsByTagName('a')[0];
+//     console.log("function");
+//     //if matched
+//     if (a.innerHTML.toUpperCase().indexOf(filterValue) > -1) {
+//       div[i].style.display = '';
+//       console.log("working");
+//     } else {
+//       div[i].style.display = 'none';
+//       console.log("not working");
+//     }
+//   }
+// }
