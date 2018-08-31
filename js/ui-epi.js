@@ -20,7 +20,7 @@ class UI {
         return `
           <div class="col-xs-6 col-sm-4 col-md-4">
             <div class="card bg-dark text-white mb-3" style="color:#333;">
-              <img src="" class="img-responsive card-img-top">
+              <img src="img/img1.png" class="img-responsive card-img-top">
               <div class="card-body">
                 <h5 class="card-title">${result.name}</h5>
 
